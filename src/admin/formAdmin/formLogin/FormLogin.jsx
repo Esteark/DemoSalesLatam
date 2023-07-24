@@ -83,7 +83,7 @@ const FormLogin = () => {
           Password
           <input
             type="password"
-            placeholder="Ingrese su Id"
+            placeholder="***********"
             {...register("pass", { required: "El password es requerido" })}
           />
           {errors.pass ? (
