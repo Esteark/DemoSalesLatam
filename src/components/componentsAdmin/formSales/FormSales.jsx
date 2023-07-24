@@ -7,7 +7,7 @@ import { AppContext } from "../../../router/Routers";
 import { getBranches } from "../../../services/branchActions";
 import { getProductsFiltered } from "../../../services/productsActions";
 import { Toaster, toast } from "react-hot-toast";
-import useValidate from "../../../hooks/UseValidate";
+import useValidate from "../../../hooks/useValidate.js";
 import Swal from "sweetalert2";
 import { addSale } from "../../../services/salesAction";
 import { useNavigate } from "react-router-dom";
