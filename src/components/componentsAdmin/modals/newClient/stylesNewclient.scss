@@ -1,0 +1,75 @@
+@use "../../../../vars.scss" as v;
+.secModalClient {
+  width: 100%;
+  min-height: 200px;
+  background: v.$white;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 30px;
+  &__sec1 {
+    display: flex;
+    justify-content: end;
+    font-size: 25px;
+    .iconCloseModal {
+      cursor: pointer;
+      color: v.$secondaryBlue;
+      transition: 0.5s;
+      &:hover {
+        color: v.$primaryFont;
+        transition: 0.5s;
+      }
+    }
+  }
+  &__sec2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 14px;
+      color: v.$secondaryFont;
+      input {
+        border: none;
+        box-shadow: -9px 9px 12px -18px rgba(0, 0, 0, 0.75);
+        height: 30px;
+        padding: 0 10px;
+        font-size: 1rem;
+        color: v.$secondaryFont;
+        background: #e7e8e9;
+        &:focus {
+          outline: none;
+        }
+      }
+      .lblError {
+        font-size: 13px;
+        color: v.$secondaryBlue;
+      }
+    }
+    section {
+      margin-top: 10px;
+      .button {
+        width: 100%;
+        border: none;
+        font-size: 14px;
+        font-family: v.$primaryFont;
+        color: v.$white;
+        background: v.$primary;
+        padding: 10px 20px;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover {
+          background-color: v.$secondaryBlue;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .secModalClient {
+    width: 50%;
+  }
+}

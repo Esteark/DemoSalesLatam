@@ -1,0 +1,108 @@
+@use "../../../vars.scss" as v;
+//diseño Mobile
+.secHeader {
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__sec1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px;
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      color: v.$secondaryFont;
+      line-height: 35px;
+    }
+    button {
+      background-color: v.$primary;
+      border: none;
+      padding: 10px 30px;
+      font-family: v.$fontMainBold;
+      text-transform: uppercase;
+      color: v.$white;
+      transition: 0.5s;
+      cursor: pointer;
+      font-family: v.$fontMainBold;
+      letter-spacing: 2px;
+      &:hover {
+        background: v.$primaryFont;
+        transition: 0.5s;
+      }
+    }
+  }
+  &__sec2 {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+// diseño screen Tablet
+@media (min-width: 768px) {
+  .secHeader {
+    flex-direction: column;
+    &__sec1 {
+      margin: 0;
+      width: 100%;
+      margin-top: 100px;
+      h1 {
+        font-size: 50px;
+      }
+      p {
+        padding: 0 5%;
+      }
+      button {
+        padding: 15px 40px;
+        font-size: 18px;
+      }
+    }
+    &__sec2 {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .secHeader {
+    flex-direction: row;
+    justify-content: start;
+
+    &__sec1 {
+      width: 40%;
+      align-items: start;
+      text-align: left;
+
+      h1 {
+        font-size: 75px;
+        line-height: 85px;
+        color: v.$primaryFont;
+      }
+      p {
+        width: 400px;
+        padding: 0;
+      }
+      button {
+        padding: 15px 35px;
+        margin-top: 50px;
+        align-self: self-start;
+      }
+      transform: translate(110px, -20px);
+    }
+    &__sec2 {
+      width: 60%;
+    }
+  }
+}

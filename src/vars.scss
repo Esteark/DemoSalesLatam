@@ -1,0 +1,32 @@
+//Importación de fuentes
+//Versión semibold de la fuente
+@font-face {
+  font-family: "OpenSans-Semibold";
+  src: url(./assets/fonts/OpenSans-Semibold.ttf);
+}
+//Versión bold de la fuente
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url(./assets/fonts/OpenSans-Bold.ttf);
+}
+
+//Versión Extrabold de la fuente
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  src: url(./assets/fonts/OpenSans-ExtraBold.ttf);
+}
+
+//Variables de fuentes
+
+$fontMain: "OpenSans-Semibold", sans-serif;
+$fontMainBold: "OpenSans-Bold", sans-serif;
+$fontMainExtraBold: "OpenSans-ExtraBold", sans-serif;
+
+//Variables de color
+$primary: #279aff;
+$secondaryBlue: #147cc9;
+$thirdBlue: #cedded;
+$primaryFont: #192843;
+$secondaryFont: #8c8c8c;
+$white: #fff;
+$secondaryWhite: #f6f7fa;

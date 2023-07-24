@@ -1,0 +1,10 @@
+.formRegister {
+  padding: 7% 5% !important;
+}
+
+@media (min-width: 992px) {
+  .formRegister {
+    padding: 3% 30% !important;
+    min-height: 110vh !important;
+  }
+}

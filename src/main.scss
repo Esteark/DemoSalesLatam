@@ -1,0 +1,45 @@
+@use "./vars.scss" as v;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: v.$fontMain;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: v.$fontMainExtraBold;
+  color: v.$primaryFont;
+}
+
+// Estilos para Barras de navegación
+
+body::-webkit-scrollbar {
+  display: block;
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: v.$secondaryFont;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+// Para quitar las flechas de los campos de tipo number
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

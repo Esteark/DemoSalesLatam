@@ -1,0 +1,83 @@
+@use "../../../vars.scss" as v;
+.secContent2 {
+  width: 100%;
+  min-height: 70vh;
+  padding: 50px 10%;
+  display: flex;
+  flex-direction: column;
+  background: url("../../../assets/img/fondoNube.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  gap: 50px;
+  justify-content: center;
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      color: v.$secondaryFont;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    figure {
+      width: 184px;
+      height: 335px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+footer {
+  width: 100%;
+  height: 120px;
+  background: v.$primary;
+}
+
+@media (min-width: 768px) {
+  .secContent2 {
+    &__text {
+      h2 {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .secContent2 {
+    padding-bottom: 100px;
+    &__text {
+      align-items: end;
+      h2 {
+        font-size: 80px;
+      }
+      p {
+        width: 400px;
+        text-align: end;
+      }
+    }
+    &__img {
+      justify-content: space-between;
+      figure {
+        width: 280px;
+        height: 500px;
+      }
+    }
+  }
+}

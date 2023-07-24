@@ -1,0 +1,101 @@
+@use "../../../vars.scss" as v;
+.secLogin {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: v.$secondaryWhite;
+  header {
+    height: 50px;
+    background: v.$primary;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    .iconOutForm {
+      font-size: 30px;
+      color: v.$white;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        transition: 0.5s;
+        color: v.$primaryFont;
+      }
+    }
+  }
+  .formAdmin {
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20% 5%;
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 14px;
+      color: v.$primaryFont;
+      input {
+        border: none;
+        box-shadow: -9px 9px 12px -16px rgba(0, 0, 0, 0.75);
+        height: 30px;
+        padding: 0 10px;
+        font-size: 13px;
+        color: v.$secondaryFont;
+        background-color: #e7e8e9;
+        &:focus {
+          outline: none;
+        }
+      }
+      .lblError {
+        font-size: 12px;
+        color: v.$secondaryBlue;
+      }
+    }
+    section {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      button {
+        background: v.$primary;
+        border: none;
+        color: v.$white;
+        padding: 10px 20px;
+        flex-grow: 1;
+        cursor: pointer;
+        font-size: 15px;
+        transition: 0.5s;
+        &:hover {
+          background: v.$primaryFont;
+          transition: 0.5s;
+        }
+      }
+      div {
+        cursor: pointer;
+        display: flex;
+        padding: 10px 20px;
+        align-items: center;
+        gap: 5px;
+        font-size: 15px;
+        color: v.$white;
+        background: v.$secondaryBlue;
+        transition: 0.5s;
+        &:hover {
+          background: v.$secondaryFont;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .secLogin {
+    .formAdmin {
+      padding: 15% 30%;
+    }
+  }
+}

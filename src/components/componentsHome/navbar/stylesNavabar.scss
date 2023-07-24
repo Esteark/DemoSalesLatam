@@ -1,0 +1,215 @@
+@use "../../../vars.scss" as v;
+
+// Estilos navbar Mobile
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  transition: 0.5s;
+  z-index: 9;
+  &__icon {
+    padding-top: 10px;
+    font-size: 30px;
+    color: v.$primaryFont;
+    z-index: 10;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  ul {
+    display: flex;
+    position: absolute;
+    background: v.$primaryFont;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    right: 0;
+    top: 0;
+    li {
+      color: v.$white;
+      font-size: 18px;
+      transition: 0.5s;
+      cursor: pointer;
+      &:hover {
+        color: v.$primaryFont;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    height: 80px;
+    justify-content: end;
+    &__icon {
+      display: none;
+    }
+
+    ul {
+      position: relative;
+      flex-direction: row;
+      gap: 20px;
+      height: auto;
+      justify-content: end;
+      background: transparent;
+      li {
+        font-size: 18px;
+        color: v.$primaryFont;
+        &:hover {
+          color: v.$secondaryFont;
+        }
+      }
+      :last-child {
+        color: v.$primary;
+        font-family: v.$fontMainBold;
+
+        &:hover {
+          color: v.$primaryFont;
+        }
+      }
+    }
+  }
+}
+
+.menuBackgroundScroll {
+  transition: 0.5s;
+  background-color: v.$primaryFont;
+  ul {
+    li {
+      color: v.$white;
+    }
+  }
+}
+
+.iconMenu {
+  color: v.$white;
+  transition: 0.5s;
+}
+
+//Animaciones para el navbar
+.scale-in-hor-center {
+  -webkit-animation: scale-in-hor-center 0.5s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-hor-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes scale-in-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.rotate-in-center {
+  -webkit-animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+@keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+//Animaciones de salida
+
+.scale-out-horizontal {
+  -webkit-animation: scale-out-horizontal 0.5s
+    cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-horizontal 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+}
+
+@-webkit-keyframes scale-out-horizontal {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-out-horizontal {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    opacity: 1;
+  }
+}

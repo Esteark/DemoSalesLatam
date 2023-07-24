@@ -1,0 +1,33 @@
+@use "../../../../vars.scss" as v;
+.secModalSale {
+  width: 90%;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: v.$white;
+  padding: 10%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  h3 {
+    font-family: v.$fontMainBold;
+    color: v.$secondaryBlue;
+    font-size: 1rem;
+  }
+  &__icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: v.$secondaryBlue;
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .secModalSale {
+    width: 30%;
+    padding: 5% 0;
+  }
+}

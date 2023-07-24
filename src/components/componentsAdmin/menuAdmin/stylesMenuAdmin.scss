@@ -1,0 +1,57 @@
+@use "../.././../vars.scss" as v;
+//Estilos diseño mobile
+.navAdmin {
+  width: 100%;
+  min-height: 50px;
+  background: v.$primary;
+  color: v.$white;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0 10px;
+
+  &__icons {
+    display: flex;
+    gap: 10px;
+
+    .icon {
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        color: v.$thirdBlue;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+//Estilos desde screen Tablet
+@media (min-width: 768px) {
+  .navAdmin {
+    width: 80px;
+    min-height: 110vh;
+    font-size: 25px;
+    justify-content: start;
+    padding: 0;
+    flex-direction: column;
+    &__icons {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .navAdmin {
+    min-height: 120vh;
+  }
+}
+
+@media (min-width: 1100px) {
+  .navAdmin {
+    min-height: 100vh;
+  }
+}

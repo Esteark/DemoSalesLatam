@@ -1,0 +1,298 @@
+@use "../../../vars.scss" as v;
+.form {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  &__label {
+    font-size: 20px;
+    color: v.$primaryFont;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  &__sec1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 5px;
+
+    .secInput {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 14px;
+      color: v.$secondaryFont;
+      div {
+        .inputClient {
+          width: 100%;
+          .input {
+            width: 100%;
+          }
+        }
+        .secBuscador {
+          height: 50px;
+          background: v.$white;
+          width: 100%;
+          position: absolute;
+          overflow-y: scroll;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          h3 {
+            width: 100%;
+            padding: 5px;
+            font-size: 12px;
+            color: v.$secondaryFont;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+              background: v.$thirdBlue;
+              transition: 0.5s;
+            }
+          }
+        }
+
+        .secBuscador::-webkit-scrollbar {
+          display: block;
+          width: 5px;
+        }
+
+        .secBuscador::-webkit-scrollbar-thumb {
+          background-color: v.$secondaryFont;
+          border-radius: 10px;
+        }
+        .secBuscador::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+        }
+      }
+      .input {
+        border: none;
+        box-shadow: -9px 9px 12px -18px rgba(0, 0, 0, 0.75);
+        height: 30px;
+        padding: 0 10px;
+        font-size: 1rem;
+        color: v.$secondaryFont;
+        background: #e7e8e9;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        input {
+          flex-grow: 1;
+        }
+        .iconPlus {
+          background-color: v.$primary;
+          color: v.$white;
+          height: 30px;
+          width: 30px;
+          padding: 3px;
+          cursor: pointer;
+          transition: 0.5s;
+          &:hover {
+            background: v.$secondaryBlue;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+  &__sec2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .header {
+      display: none;
+      h3 {
+        font-size: 1rem;
+        color: v.$secondaryFont;
+        font-family: v.$fontMain;
+      }
+    }
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: 100px;
+      overflow-y: scroll;
+      padding-right: 10px;
+      padding: 10px 5px;
+      border: 1px solid v.$secondaryFont;
+      p {
+        width: 100%;
+        height: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: v.$secondaryFont;
+        font-size: 1rem;
+      }
+    }
+
+    .details::-webkit-scrollbar {
+      display: block;
+      width: 5px;
+    }
+
+    .details::-webkit-scrollbar-thumb {
+      background-color: v.$secondaryFont;
+      border-radius: 5px;
+    }
+    .details::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+    }
+  }
+  &__sec3 {
+    display: flex;
+    justify-content: start;
+    .button {
+      border: none;
+      font-size: 1rem;
+      font-family: v.$primaryFont;
+      color: v.$white;
+      background: v.$primary;
+      padding: 5px 20px;
+      transition: 0.5s;
+      cursor: pointer;
+      &:hover {
+        background-color: v.$secondaryBlue;
+        transition: 0.5s;
+      }
+    }
+  }
+  &__sec4 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+    padding: 0;
+    h3 {
+      font-family: v.$fontMain;
+      color: v.$secondaryFont;
+      font-size: 1rem;
+    }
+    .total {
+      width: 90%;
+      height: 30px;
+      background-color: #e7e8e9;
+      display: flex;
+      align-items: center;
+      color: v.$primaryFont;
+      padding-left: 10px;
+    }
+  }
+  &__sec5 {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    .button {
+      width: 100%;
+      border: none;
+      font-size: 1rem;
+      font-family: v.$primaryFont;
+      color: v.$white;
+      background: v.$primary;
+      padding: 5px 20px;
+      transition: 0.5s;
+      cursor: pointer;
+      &:hover {
+        background-color: v.$secondaryBlue;
+        transition: 0.5s;
+      }
+    }
+    .buttonDetail {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: v.$primaryFont;
+      font-size: 13px;
+      width: 100%;
+      transition: 0.5s;
+      color: v.$white;
+      padding: 8px 0;
+      cursor: pointer;
+      &:hover {
+        background-color: v.$secondaryBlue;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (min-width: 992px) {
+  .form {
+    min-height: 60vh;
+    gap: 20px;
+    &__label {
+      font-size: 25px;
+    }
+    &__sec1 {
+      grid-template-columns: 35% 35% 20%;
+      grid-template-rows: auto;
+      justify-content: space-between;
+
+      .secInput {
+        .input {
+          height: 40px;
+        }
+        div {
+          .iconPlus {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    &__sec2 {
+      .header {
+        display: grid;
+        grid-template-columns: 40% 15% 15% 15% 5%;
+        grid-template-rows: auto;
+        justify-content: space-between;
+      }
+      .details {
+        gap: 5px;
+      }
+    }
+
+    &__sec3 {
+      button {
+        padding: 5px 30px;
+      }
+    }
+
+    &__sec4 {
+      padding-right: 9%;
+
+      .total {
+        width: 15%;
+      }
+    }
+    &__sec5 {
+      flex-direction: row;
+      justify-content: space-between;
+      .button {
+        width: 10%;
+        padding: 10px 30px;
+      }
+      .buttonDetail {
+        width: 20%;
+      }
+    }
+  }
+}
