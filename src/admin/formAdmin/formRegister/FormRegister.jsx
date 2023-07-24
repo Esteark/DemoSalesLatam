@@ -3,7 +3,7 @@ import "./stylesFormRegister.scss";
 import { useForm } from "react-hook-form";
 import { TbDoorEnter } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
-import useValidate from "../../../hooks/UseValidate";
+import useValidate from "../../../hooks/UseValidate.js";
 import { Toaster, toast } from "react-hot-toast";
 import { addUser, getUsers } from "../../../services/userActions";
 import { AppContext } from "../../../router/Routers";
